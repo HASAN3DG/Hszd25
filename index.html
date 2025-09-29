@@ -4,11 +4,12 @@
     <meta charset="UTF-g" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hszd25 - Prompt Generator</title>
+    <title>Hszd25 - AI Prompt Stylist</title>
     <script src="https://cdn.tailwindcss.com"></script>
   <script type="importmap">
 {
   "imports": {
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.1.1",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
     "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
     "react/": "https://aistudiocdn.com/react@^19.1.1/",
@@ -16,8 +17,48 @@
   }
 }
 </script>
+  <style>
+    body {
+      background-color: #111827;
+      background-image: 
+        radial-gradient(at 15% 85%, hsla(269, 74%, 44%, 0.3) 0px, transparent 50%),
+        radial-gradient(at 85% 20%, hsla(190, 84%, 51%, 0.3) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, hsla(314, 79%, 52%, 0.2) 0px, transparent 50%);
+    }
+    .glass-card {
+      background: rgba(23, 27, 43, 0.5);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(100, 116, 139, 0.3);
+    }
+    .preview-tooltip {
+      position: fixed;
+      z-index: 9999;
+      width: 144px;
+      padding: 8px;
+      border-radius: 12px;
+      pointer-events: none;
+      transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+      background: rgba(23, 27, 43, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(100, 116, 139, 0.4);
+      text-align: center;
+      color: #e2e8f0;
+      font-size: 12px;
+      line-height: 1.4;
+      font-family: sans-serif;
+    }
+    .preview-tooltip img {
+      width: 128px;
+      height: 128px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 6px;
+    }
+  </style>
 </head>
-  <body class="bg-gray-900">
+  <body class="antialiased">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
