@@ -1,0 +1,5 @@
+{
+  "name": "Hszd25",
+  "description": "An application to generate descriptive image prompts from an uploaded image and apply various artistic styles.",
+  "requestFramePermissions": []
+}
